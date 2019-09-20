@@ -2,27 +2,73 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/webjars/font-awesome/5.10.1/css/fontawesome.min.css" rel="stylesheet" media="screen">
-    <link href="/webjars/jquery-ui/1.12.1/css/jquery-ui.min.css" rel="stylesheet" media="screen">
-    <link href="/webjars/popper.js/1.15.0/ss/jquery-ui.min.css" rel="stylesheet" media="screen">
-    <title>Static Site Home Page</title>
+    <meta charset="UTF-8" />
+    <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="/webjars/font-awesome/5.10.1/css/fontawesome.min.css" rel="stylesheet" media="screen" />
+    <link href="/webjars/jquery-ui/1.12.1/css/jquery-ui.min.css" rel="stylesheet" media="screen" />
+    <link href="/webjars/popper.js/1.15.0/ss/jquery-ui.min.css" rel="stylesheet" media="screen" />
+    <link href="assets/css/style.css" rel="stylesheet" media="screen" />
+    <title>Static Site Spring Boot Home Page</title>
+    <style>
+        em {
+            color: magenta;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>HEY YUNG WORLD!</h1>
-    <p>ceci est mon premier paragraphe</p>
-    <p>ceci est mon deuxieme paragraphe</p>
-    <p>ceci est mon troisieme paragraphe</p>
-    <p>ceci est mon quatrieme paragraphe</p>
-    <p>ceci est mon cinquieme paragraphe</p>
+    <!--<h> pour header-->
+    <h1 style="color: cadetblue">Ceci est mon premier titre</h1>
+    <h2>Ceci est un autre titre</h2>
+    <h3>Ceci est un titre de niveau 3</h3>
+    <!-- <p> pour paragraph -->
+    <p>Ceci est mon <br/>
+        <!-- <br/> pour break line -->premier paragraphe</p>
+    <!-- em pour marquer un texte sur lequel on veut insister.  -->
+    <!-- mark pour Highlight le text -->
+    <!-- strong pour mettre en gras -->
+    <p>Ceci <em>est</em> un <mark>autre</mark> <strong>paragraphe</strong></p>
 
+    <!-- unsorted list -->
+    <ul>
+        <!-- list item -->
+        <li>Fraise</li>
+        <li>Route</li>
+        <li>Maison</li>
+    </ul>
 
+    <!-- organized list -->
+    <ol>
+        <li>Introduction</li>
+        <li>Thèse défendue</li>
+        <li>Thése refutée</li>
+        <li>Conclusion</li>
+    </ol>
+    <!-- description list -->
+    <dl>
+        <!-- description list -->
+        <dt>HTML</dt>
+        <!-- dd definition description -->
+        <dd>HTML est l'acronyme de HyperText Markup Language</dd>
+    </dl>
+
+    <ol>
+        <li>Natation
+            <ul>
+                <li>Maillot</li>
+                <li>Bonnet de bain</li>
+                <li>Lunette de natation</li>
+            </ul>
+        </li>
+        <li>Vélo</li>
+        <liCourse à pied>
+            </li>
+    </ol>
 
     <div class="container"><br/>
         <div class="alert alert-success">
-            <strong>Success!</strong> It is working as we expected.
+            <strong>Bien joué!</strong> Bootstrap 4.3.1 est là.
         </div>
     </div>
 
@@ -33,13 +79,6 @@
     <script src="/webjars/d3js/5.9.7/webjars-requirejs.js"></script>
     <script src="/webjars/popper.js/1.15.0/popper.min.js"></script>
     <script src="/webjars/moment/2.24.0/min/moment-with-locales.min.js"></script>
-
-
 </body>
 
 </html>
-
-<!-- 
-
-implementation 'org.webjars.bower:moment:2.24.0'
--->
