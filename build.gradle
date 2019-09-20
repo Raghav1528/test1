@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.1.8.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'groovy'
+	id 'java'
 }
 
 group = 'com.cheroliv'
@@ -18,12 +19,39 @@ configurations {
 	}
 	compile.exclude module: "spring-boot-starter-tomcat"
 }
+sourceSets {
+    main {
+        java { srcDirs = [] }
+        groovy { srcDirs = ["src/main/java", "src/main/groovy"] }
+    }
+    test {
+        java { srcDirs = [] }
+        groovy { srcDirs = ["src/test/java", "src/test/groovy"] }
+    }
+}
+
+bootRun {
+	sourceResources sourceSets.main
+}
 
 repositories {
 	mavenCentral()
 }
 
+dependencyManagement {
+	imports {
+		mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+	}
+}
+
 dependencies {
+	implementation 'org.webjars:font-awesome:5.10.1'
+	implementation 'org.webjars:jquery:3.4.0'
+	implementation 'org.webjars:bootstrap:4.3.1'
+	implementation 'org.webjars:jquery-ui:1.12.1'
+	implementation 'org.webjars:popper.js:1.15.0'
+	implementation 'org.webjars.bower:moment:2.24.0'
+	implementation 'org.webjars:d3js:5.9.7'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-undertow'
 	implementation 'org.codehaus.groovy:groovy'

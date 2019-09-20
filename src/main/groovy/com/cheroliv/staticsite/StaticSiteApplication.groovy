@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
 class StaticSiteApplication {
-
-	static void main(String[] args) {
-		SpringApplication.run(StaticSiteApplication, args)
-	}
-
+    static void main(String[] args) {
+        SpringApplication.run(StaticSiteApplication, args)
+    }
 }
